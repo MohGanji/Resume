@@ -1,0 +1,293 @@
+%-------------------------
+% Resume in Latex
+% Author : Mohammad Ganji
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{-6pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-1pt}}
+  }
+}
+\newcommand{\aboutItem}[1]{
+  \item\small{
+    {#1 \vspace{-6pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-8pt}
+}
+
+\newcommand{\resumeProjectHeading}[3]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      {#1} & {\color{dark-grey}\small #2 \hspace{1pt} $|$ \hspace{1pt} #3} \vspace{1pt}\\ % top row of resume entry
+    \end{tabular*}\vspace{-6pt}
+}
+
+% \newcommand{\resumeProjectHeading}[2]{
+%     \item
+%     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%       #1 & {\color{dark-grey}} \\
+%     \end{tabular*}\vspace{-4pt}
+% }
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+
+% HEADER COMMANDS
+\newcommand{\github}[1]{{\faGithub \hspace{1pt} \href{https://github.com/#1/}{\texttt{#1}}}}
+
+\newcommand{\email}[1]{\faEnvelope \hspace{1pt} \href{mailto:#1}{\texttt{#1}}}
+
+\newcommand{\website}[1]{\faLink \hspace{1pt} \href{http://#1/}{\texttt{#1}}}
+
+\newcommand{\stackoverflow}[2]{\faStackOverflow \hspace{1pt} \href{https://stackoverflow.com/users/#1}{\texttt{#2}}}
+
+\newcommand{\linkedin}[1]{{\faLinkedin \hspace{1pt} \href{https://www.linkedin.com/in/#1/}{\texttt{#1}}}}
+
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Mohammad Ganji} \\ \vspace{5pt}
+    \small 
+        \website{m.ganji.blog}
+    \hspace{1pt} $|$ \hspace{1pt}
+        \github{mohganji}
+    \hspace{1pt} $|$ \hspace{1pt} 
+        \email{mohganji97@gmail.com}
+    \hspace{1pt} $|$ \hspace{1pt} 
+        \linkedin{mohganji}
+    \hspace{1pt} $|$ \hspace{1pt} 
+        \stackoverflow{7025986/mo-ganji}{>1000 reputation}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-------------SUMMARY------------
+\section{About}
+
+\resumeItemListStart
+    \aboutItem{Thesis-based Master student at SFU, with a focus on debugging and testing asynchronous software. }
+    \aboutItem{Worked 3 years as a software engineer. Also built, shipped, and maintained 5+ freelance and personal projects.}
+    \aboutItem{Developed, maintained, and revamped 5 back-end services, in micro-services and monolithic architectures.}
+    \aboutItem{Designed, improved, and optimized databases for 4 services. Worked with SQL(PostgreSQL) and noSQL(MongoDB, Redis). Optimized tables with +100m records.}
+    \aboutItem{Actively engaged in cross-team communications with dev teams, sales, product owners, and account managers.}
+    \aboutItem{Contributed in hiring: mentorship, tech interviews and code reviews.}
+    % \aboutItem{I also maintain a blog \href{https://m.ganji.blog}{\small \faExternalLink*}. It's my little shelf on the corner of the internet.}
+\resumeItemListEnd
+        
+
+%-----------PROGRAMMING SKILLS-----------
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+       \textbf{Languages}{: Python, Typescript, JavaScript, SQL, Java, C++, MongoDB, HTML/CSS} \vspace{2pt} \\
+       \textbf{Knowledge}{: Design Patterns, Database Design, Object Oriented Design, Microservice Architecture, Mentoring, Linux Servers, Problem Solving, Data Structures and Algorithms } \vspace{2pt} \\
+       \textbf{Frameworks \& Tools}{: Django Rest Framework, Redis, Node.js, React.js, Git, Docker, Nginx, Trello, ELK Stack, Grafana}
+    }}
+ \end{itemize}
+
+%-----------EXPERIENCE-----------
+\section{PROFESSIONAL EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Yektanet - The largest online advertising platform in Iran (+250 employees) \href{https://en.yektanet.com}{\small \faExternalLink*}}{Dec. 2019 -- Dec. 2020 (1yr)}
+      {Software Engineer - Push Notification Ads Service}{Tehran, IR}
+      \resumeItemListStart
+        \resumeItem{Refactored push micro-service; Designed and implemented a more maintainable and extensible architecture utilizing OOD and Design Patterns; This allowed scaling to 100M daily push notifications and 20x more revenue in 1 year.}
+        \resumeItem{Developed and maintained 50+ APIs using Django Rest Framework; Improved average response time to 75\%.}
+        \resumeItem{Optimized push database(100M+ records, 20+ tables in PostgreSQL) by rewriting complex queries, improving indexing, caching and in memory optimizations(on Redis) and automated clustering; Reduced query time by 80\%.}
+        \resumeItem{Managed product release and launch of CPC push feature; Generated over 30\% of the revenue of push ads service.}
+        \resumeItem{Created and maintained a dashboard of 20+ charts for debugging using ELK Stack.} 
+        \resumeItem{Conducted interviews for 5 applicants, mentored 3 interns, reviewed 100+ resumes and 100+ coding tasks.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Pheebs - Mobile Apps Startup}{Sep. 2017 -- Nov. 2019 (2yrs)}
+      {Full Stack Developer}{Tehran, IR}
+      \resumeItemListStart
+        \resumeItem{Worked on server-side development of 2 mobile applications, Chizz(120k+ monthly active users) and Episode(20k+ users) using Node.js,  Express.js, and Graphql in teams of 4\textasciitilde5.}
+        \resumeItem{Developed admin panel, landing page, and web views for Episode and Chizz, using React.js, HTML/CSS, jQuery.}
+        \resumeItem{Implemented database models \& caching(30+ collections) using MongoDB,  Mongoose, and Redis. }
+        \resumeItem{Wrote and maintained unit and integration tests for Chizz \& Episode using Jest.}
+        \resumeItem{Set up deployment automation for Episode using Docker and Nginx on Linux servers.}
+        % \resumeItem{Maintained Metabase dashboards for data analysis;}
+
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Simon Fraser University}{Sep. 2020 -- Dec. 2022 (expected)}
+      {M.S. in Computer Science, Current GPA: 3.89/4.00, Advisor: Saba Alimadadi Jani \href{https://www.sfu.ca/computing/people/faculty/sabaalimadadi.html}{\small \faExternalLink*}}{Burnaby, CA}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Research Areas}: Dynamic analysis, asynchronous programming, practical software engineering}
+    	\resumeItem {\textbf{TA Experience}: CMPT276 (Intro to Software Engineering); CMPT120 (Intro to Computer Science and Programming)}
+    % 	\resumeItem {\textbf{Expected Graduation Date}: Dec. 2022}
+        \resumeItemListEnd
+        
+    \resumeSubheading
+      {University of Tehran}{Sep. 2015 -- May. 2020}
+      {B.S. in Software Engineering, GPA: 3.40/4.00}{Tehran, IR}
+      	\resumeItemListStart
+        \resumeItem {\textbf{Thesis}: "Real-time verification and evaluation of algorithms efficiency in distributed actor based systems"}
+        % \resumeItem {\textbf{TA Experience}: Design \& Analysis of Algorithms (5 terms); Design of Programming Languages \& Compilers}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+        
+        \resumeProjectHeading 
+          {\textbf{BlogFrog.xyz} - A place to discover new random blog posts on the internet. \href{http://blogfrog.xyz}{\small \faExternalLink*}} 
+          {Jul. 2022 - Now} 
+          {Burnaby, CA} \vspace{-8pt}
+          
+        \resumeProjectHeading
+          {\textbf{m.ganji.blog} - My Personal Website \href{http://m.ganji.blog}{\small \faExternalLink*}} 
+          {Mar. 2022 -- Now} 
+          {Burnaby, CA} \vspace{-8pt}
+          
+        \resumeProjectHeading
+          {\textbf{In-Lab Exam Scheduler Platform} - Contract Job} 
+          {Jun. 2021 -- Sep. 2021} 
+          {Burnaby, CA} \vspace{-8pt}
+          \resumeItemListStart 
+            \resumeItem{Developed a web platform to automate scheduling in-lab testing at SFU CSIL labs using Express.js, Nginx, PostgreSQL, and EJS.}
+          \resumeItemListEnd 
+          
+        \resumeProjectHeading 
+          {\textbf{SchemaIran Telegram bot} - Freelance Project \href{https://t.me/SchemaIran_Bot}{\small\faExternalLink*}}
+          {Mar. 2017 -- Now}
+          {Tehran, IR} \vspace{-8pt}
+          \resumeItemListStart
+            \resumeItem{Developed a Telegram bot for Schemairan \href{https://schemairan.ir}{\small \faExternalLink*} clinic to conduct Young Schema Questionnaire \href{https://doi.org/10.1037/t67023-000}{\small \faExternalLink*} using Node.js and MongoDB; Collected 5k+ test results.}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+
+%-------------------------------------------
+\end{document}
