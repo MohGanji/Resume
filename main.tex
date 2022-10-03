@@ -1,11 +1,10 @@
 %-------------------------
-% Resume in Latex
+% My Resume in Latex
 % Author : Mohammad Ganji
-% Based off of: https://github.com/jakeryang/resume
 % License : MIT
 %------------------------
 
-\documentclass[letterpaper,10pt]{article}
+\documentclass[letterpaper,10.8pt]{article}
 
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
@@ -14,44 +13,16 @@
 \usepackage[usenames,dvipsnames]{color}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
+\usepackage[pdftex]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-% only for pdflatex
-% \input{glyphtounicode}
 
-% fontawesome
-\usepackage{fontawesome5}
-
-% fixed width
-\usepackage[scale=0.90,lf]{FiraMono}
-
-% light-grey
-\definecolor{light-grey}{gray}{0.83}
-\definecolor{dark-grey}{gray}{0.3}
-\definecolor{text-grey}{gray}{.08}
-
-\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
-\DeclareTextFontCommand{\texteb}{\ebseries}
-
-% custom underilne
-\usepackage{contour}
-\usepackage[normalem]{ulem}
-\renewcommand{\ULdepth}{1.8pt}
-\contourlength{0.8pt}
-\newcommand{\myuline}[1]{%
-  \uline{\phantom{#1}}%
-  \llap{\contour{white}{#1}}%
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={black!50!black},
+    citecolor={black!50!black},
+    urlcolor={black!80!black}
 }
-
-
-% custom font: helvetica-style
-\usepackage{tgheros}
-\renewcommand*\familydefault{\sfdefault} 
-%% Only if the base font of the document is to be sans serif
-\usepackage[T1]{fontenc}
-
 
 \pagestyle{fancy}
 \fancyhf{} % clear all header and footer fields
@@ -60,234 +31,181 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.5in}
-\addtolength{\evensidemargin}{0in}
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
-\addtolength{\textheight}{1.0in}
+\addtolength{\textheight}{1in}
 
-\urlstyle{same}
+\urlstyle{rm}
 
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting - serif
-% \titleformat{\section}{
-%   \vspace{2pt} \scshape \raggedright\large % header section
-% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
-
-% TODO EBSERIES
-% sans serif sections
-\titleformat {\section}{
-    \bfseries \vspace{-6pt} \raggedright \large % header section
-}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
-
-% only for pdflatex
-% Ensure that generate pdf is machine readable/ATS parsable
-% \pdfgentounicode=1
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-3pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[1]{
+\newcommand{\resumeItemWithTitle}[2]{
   \item\small{
-    {#1 \vspace{-1pt}}
+    \textbf{#1}{: #2 \vspace{-4pt}}
   }
 }
-\newcommand{\aboutItem}[1]{
+
+\newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 \vspace{-6pt}}
+    {#1\vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
-      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
-    \end{tabular*}\vspace{-4pt}
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-8pt}
-}
 
-\newcommand{\resumeProjectHeading}[3]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      {#1} & {\color{dark-grey}\small #2 \hspace{1pt} $|$ \hspace{1pt} #3} \vspace{1pt}\\ % top row of resume entry
-    \end{tabular*}\vspace{-6pt}
-}
+\newcommand{\resumeSubItem}[2]{\resumeItemWithTitle{#1}{#2}\vspace{-4pt}}
 
-% \newcommand{\resumeProjectHeading}[2]{
-%     \item
-%     \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-%       #1 & {\color{dark-grey}} \\
-%     \end{tabular*}\vspace{-4pt}
-% }
+\renewcommand{\labelitemii}{$\circ$}
 
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-% CHANGED default leftmargin  0.15 in
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
-
-
-% HEADER COMMANDS
-\newcommand{\github}[1]{{\faGithub \hspace{1pt} \href{https://github.com/#1/}{\texttt{#1}}}}
-
-\newcommand{\email}[1]{\faEnvelope \hspace{1pt} \href{mailto:#1}{\texttt{#1}}}
-
-\newcommand{\website}[1]{\faLink \hspace{1pt} \href{http://#1/}{\texttt{#1}}}
-
-\newcommand{\stackoverflow}[2]{\faStackOverflow \hspace{1pt} \href{https://stackoverflow.com/users/#1}{\texttt{#2}}}
-
-\newcommand{\linkedin}[1]{{\faLinkedin \hspace{1pt} \href{https://www.linkedin.com/in/#1/}{\texttt{#1}}}}
-
-
-\color{text-grey}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
-%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \begin{document}
 
-%----------HEADING----------
-\begin{center}
-    \textbf{\Huge Mohammad Ganji} \\ \vspace{5pt}
-    \small 
-        \website{m.ganji.blog}
-    \hspace{1pt} $|$ \hspace{1pt}
-        \github{mohganji}
-    \hspace{1pt} $|$ \hspace{1pt} 
-        \email{mohganji97@gmail.com}
-    \hspace{1pt} $|$ \hspace{1pt} 
-        \linkedin{mohganji}
-    \hspace{1pt} $|$ \hspace{1pt} 
-        \stackoverflow{7025986/mo-ganji}{>1000 reputation}
-    \\ \vspace{-3pt}
-\end{center}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\LARGE Mohammad Ganji}} \\
+  %
+  Linkedin: \href{https://www.linkedin.com/in/mohganji/}{https://www.linkedin.com/in/mohganji} 
+  & Email : \href{mailto:mohganji97@gmail.com}{mohganji97@gmail.com} \\
+  %
+  Github: \href{https://github.com/mohganji}{https://github.com/mohganji} 
+  & Website: \href{http://m.ganji.blog}{m.ganji.blog}\\
+  %
+  Stack Overflow: \href{https://stackoverflow.com/users/7025986/mo-ganji}{mo-ganji (+1000 reputation)} 
+  & Mobile : +1-778-957-5657 \\
+\end{tabular*}
 
-%-------------SUMMARY------------
-\section{About}
-
-\resumeItemListStart
-    \aboutItem{Thesis-based Master student at SFU, with a focus on debugging and testing asynchronous software. }
-    \aboutItem{Worked 3 years as a software engineer. Also built, shipped, and maintained 5+ freelance and personal projects.}
-    \aboutItem{Developed, maintained, and revamped 5 back-end services, in micro-services and monolithic architectures.}
-    \aboutItem{Designed, improved, and optimized databases for 4 services. Worked with SQL(PostgreSQL) and noSQL(MongoDB, Redis). Optimized tables with +100m records.}
-    \aboutItem{Actively engaged in cross-team communications with dev teams, sales, product owners, and account managers.}
-    \aboutItem{Contributed in hiring: mentorship, tech interviews and code reviews.}
-    % \aboutItem{I also maintain a blog \href{https://m.ganji.blog}{\small \faExternalLink*}. It's my little shelf on the corner of the internet.}
-\resumeItemListEnd
-        
-
-%-----------PROGRAMMING SKILLS-----------
-\section{SKILLS}
- \begin{itemize}[leftmargin=0in, label={}]
-    \small{\item{
-       \textbf{Languages}{: Python, Typescript, JavaScript, SQL, Java, C++, MongoDB, HTML/CSS} \vspace{2pt} \\
-       \textbf{Knowledge}{: Design Patterns, Database Design, Object Oriented Design, Microservice Architecture, Mentoring, Linux Servers, Problem Solving, Data Structures and Algorithms } \vspace{2pt} \\
-       \textbf{Frameworks \& Tools}{: Django Rest Framework, Redis, Node.js, React.js, Git, Docker, Nginx, Trello, ELK Stack, Grafana}
-    }}
- \end{itemize}
-
-%-----------EXPERIENCE-----------
-\section{PROFESSIONAL EXPERIENCE}
+%-----------EXPERIENCE-----------------
+\section{Experience}
   \resumeSubHeadingListStart
-
     \resumeSubheading
-      {Yektanet - The largest online advertising platform in Iran (+250 employees) \href{https://en.yektanet.com}{\small \faExternalLink*}}{Dec. 2019 -- Dec. 2020 (1yr)}
-      {Software Engineer - Push Notification Ads Service}{Tehran, IR}
-      \resumeItemListStart
-        \resumeItem{Refactored push micro-service; Designed and implemented a more maintainable and extensible architecture utilizing OOD and Design Patterns; This allowed scaling to 100M daily push notifications and 20x more revenue in 1 year.}
-        \resumeItem{Developed and maintained 50+ APIs using Django Rest Framework; Improved average response time to 75\%.}
-        \resumeItem{Optimized push database(100M+ records, 20+ tables in PostgreSQL) by rewriting complex queries, improving indexing, caching and in memory optimizations(on Redis) and automated clustering; Reduced query time by 80\%.}
-        \resumeItem{Managed product release and launch of CPC push feature; Generated over 30\% of the revenue of push ads service.}
-        \resumeItem{Created and maintained a dashboard of 20+ charts for debugging using ELK Stack.} 
-        \resumeItem{Conducted interviews for 5 applicants, mentored 3 interns, reviewed 100+ resumes and 100+ coding tasks.}
-      \resumeItemListEnd
-
-    \resumeSubheading
-      {Pheebs - Mobile Apps Startup}{Sep. 2017 -- Nov. 2019 (2yrs)}
-      {Full Stack Developer}{Tehran, IR}
-      \resumeItemListStart
-        \resumeItem{Worked on server-side development of 2 mobile applications, Chizz(120k+ monthly active users) and Episode(20k+ users) using Node.js,  Express.js, and Graphql in teams of 4\textasciitilde5.}
-        \resumeItem{Developed admin panel, landing page, and web views for Episode and Chizz, using React.js, HTML/CSS, jQuery.}
-        \resumeItem{Implemented database models \& caching(30+ collections) using MongoDB,  Mongoose, and Redis. }
-        \resumeItem{Wrote and maintained unit and integration tests for Chizz \& Episode using Jest.}
-        \resumeItem{Set up deployment automation for Episode using Docker and Nginx on Linux servers.}
-        % \resumeItem{Maintained Metabase dashboards for data analysis;}
-
+    {Simon Fraser University}{Burnaby, CA}
+    {Research and Teaching Assistant }{Sep 2020 - Dec 2022 (2 years)}
+    \resumeItemListStart
+        \resumeItem{Submitted a first author research paper on testing and debugging asynchronous programs.}
+        \resumeItem{Integrated our approach into a VSCode extension which improved users' accuracy of testing async JavaScript apps by 28\%.}
+        \resumeItem{Designed and conducted two controlled user studies.}
+        \resumeItem{Teaching Assistant for CMPT 276(Software Engineering, 3 terms) and CMPT 120(Intro to computer programming, once).}
     \resumeItemListEnd
+    
+    \resumeSubheading
+    {SFU CSIL Exam Scheduler}{Burnaby, CA}
+    {Software Developer - Contract Job}{Jun 2021 - Sep 2021 (4 months)}
+    \resumeItemListStart
+        \resumeItem{Responsible for software development of a web-based platform to automate scheduling in-lab testing at SFU CSIL labs.}
+    \resumeItemListEnd
+      
+    \resumeSubheading
+		{Yektanet}{Tehran, IR}
+		{Software Engineer (Product Engineer)}{Dec 2019 - Dec 2020 (1 year)}
+		\resumeItemListStart
+        \resumeItem{Scaled, redesigned, and refactored push microservice from 5M to 100M daily push notifications and 15x revenue in 1 year.}
+        \resumeItem{Optimized databases (100M+ records, 20+ tables in PostgreSQL) and data pipelines. Reduced average query time by 80\%.}
+        \resumeItem{Responsible for product management, launch, and release of CPC push advertisement, producing 30\% revenue growth.}
+        \resumeItem{Set up log management pipelines using ELK stack (Elasticsearch, Logstash, Kibana).}
+        \resumeItem{Managed and maintained server monitoring dashboards using Grafana.}
+        \resumeItem{Representative for cross-team and external communication with development, sales, and product teams.}
+        \resumeItem{Interviewed 5 applicants, mentored 3 interns, reviewed 100+ resumes and 100+ technical tasks.}
+		\resumeItemListEnd
 
-  \resumeSubHeadingListEnd
+    \resumeSubheading
+    {Pheebs}{Tehran, IR}
+    {Full Stack Software Developer}{Sep 2017 - Nov 2019 (2 years)}
+    \resumeItemListStart
+        \resumeItem{Implemented backend services for Chizz (120k+ monthly active users) and Episode (20k+ users) mobile apps from scratch.}
+        \resumeItem{Developed admin panel, landing page, and web views for two mobile applications.}
+        \resumeItem{Designed databases and caching using MongoDB, Mongoose, and Redis. (30+ collections)}
+        \resumeItem{Automated Deployment for Episode using Docker, CI/CD, and Nginx on Linux servers.}
+        \resumeItem{Set up data analysis dashboards using Metabase.}
+        \resumeItem{Coached one entry-level backend developer.}
+    \resumeItemListEnd
+\resumeSubHeadingListEnd
 
-
-%-----------EDUCATION-----------
-\section {EDUCATION}
+%-----------EDUCATION-----------------
+\section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Simon Fraser University}{Sep. 2020 -- Dec. 2022 (expected)}
-      {M.S. in Computer Science, Current GPA: 3.89/4.00, Advisor: Saba Alimadadi Jani \href{https://www.sfu.ca/computing/people/faculty/sabaalimadadi.html}{\small \faExternalLink*}}{Burnaby, CA}
-      	\resumeItemListStart
-    	\resumeItem {\textbf{Research Areas}: Dynamic analysis, asynchronous programming, practical software engineering}
-    	\resumeItem {\textbf{TA Experience}: CMPT276 (Intro to Software Engineering); CMPT120 (Intro to Computer Science and Programming)}
-    % 	\resumeItem {\textbf{Expected Graduation Date}: Dec. 2022}
-        \resumeItemListEnd
-        
+      {Simon Fraser University}{Burnaby, CA}
+      {Thesis based Masters in Computer Science;  GPA: 3.89}{Sep 2020 - Dec 2022 (expected)}
+      
+	   %{\scriptsize \textit{Courses: Operating Systems, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Probability and Statistics and Network Security.}}
+	    
     \resumeSubheading
-      {University of Tehran}{Sep. 2015 -- May. 2020}
-      {B.S. in Software Engineering, GPA: 3.40/4.00}{Tehran, IR}
-      	\resumeItemListStart
-        \resumeItem {\textbf{Thesis}: "Real-time verification and evaluation of algorithms efficiency in distributed actor based systems"}
-        % \resumeItem {\textbf{TA Experience}: Design \& Analysis of Algorithms (5 terms); Design of Programming Languages \& Compilers}
-        \resumeItemListEnd
+      {University of Tehran}{Tehran, IR}
+      {Bachelor of Computer Science;  GPA: 3.40}{Sep 2015 - May 2020}
   \resumeSubHeadingListEnd
 
+%-----------PROJECTS-----------------
+\section{Projects}
 
-%-----------PROJECTS-----------
+\resumeSubHeadingListStart
+    \resumeSubheading
+      {\href{http://blogfrog.xyz}{Blogfrog.xyz}}{Burnaby, CA}
+      {A website to discover new random blog posts on the internet.}{Jul 2022}
+	    
+    \resumeSubheading
+      {\href{http://m.ganji.blog}{m.ganji.blog}}{Burnaby, CA}
+      {My personal website}{Mar 2022}
+      
+    \resumeSubheading
+      {\href{https://t.me/SchemaIran_Bot}{SchemaIran Telegram Bot - Freelance Project}}{Tehran, IR}
+      {Developed a Telegram bot for Schemairan clinic to conduct YSQ tests online. Collected 10k+ test results.}{Mar 2022}
+\resumeSubHeadingListEnd
 
-\section{PROJECTS}
-    \resumeSubHeadingListStart
-        
-        \resumeProjectHeading 
-          {\textbf{BlogFrog.xyz} - A place to discover new random blog posts on the internet. \href{http://blogfrog.xyz}{\small \faExternalLink*}} 
-          {Jul. 2022 - Now} 
-          {Burnaby, CA} \vspace{-8pt}
-          
-        \resumeProjectHeading
-          {\textbf{m.ganji.blog} - My Personal Website \href{http://m.ganji.blog}{\small \faExternalLink*}} 
-          {Mar. 2022 -- Now} 
-          {Burnaby, CA} \vspace{-8pt}
-          
-        \resumeProjectHeading
-          {\textbf{In-Lab Exam Scheduler Platform} - Contract Job} 
-          {Jun. 2021 -- Sep. 2021} 
-          {Burnaby, CA} \vspace{-8pt}
-          \resumeItemListStart 
-            \resumeItem{Developed a web platform to automate scheduling in-lab testing at SFU CSIL labs using Express.js, Nginx, PostgreSQL, and EJS.}
-          \resumeItemListEnd 
-          
-        \resumeProjectHeading 
-          {\textbf{SchemaIran Telegram bot} - Freelance Project \href{https://t.me/SchemaIran_Bot}{\small\faExternalLink*}}
-          {Mar. 2017 -- Now}
-          {Tehran, IR} \vspace{-8pt}
-          \resumeItemListStart
-            \resumeItem{Developed a Telegram bot for Schemairan \href{https://schemairan.ir}{\small \faExternalLink*} clinic to conduct Young Schema Questionnaire \href{https://doi.org/10.1037/t67023-000}{\small \faExternalLink*} using Node.js and MongoDB; Collected 5k+ test results.}
-          \resumeItemListEnd
-          
-    \resumeSubHeadingListEnd
+% \resumeSubHeadingListStart
+%     \resumeSubItem{Plug board Proxy (Networking)}{Developed a plug board proxy that adds an extra layer of encryption to connections towards TCP services. Clients running on same server connect to pbproxy, which then relays all traffic to actual services. (Mar '16)}
+%     \resumeSubItem{Asynchronous Work Queue Manager (Kernel Programming)}{Developed a kernel module to serve as an asynchronous work queue manager with configurable worker threads. Implemented netlink sockets to propagate callbacks from kernel to user land and throttling to improve job extraction latency. (Nov '15)}
+%     \resumeSubItem{Anti-Malware Stackable File System (Kernel Programming)}{Implemented a stackable, anti-malware Linux file system that prevents the existing file system from being corrupted by malware by detecting virus pattern while attempting to open, read and write a file. (Oct '15)}
+%     \resumeSubItem{File Encryption System Call (Kernel Programming)}{Implemented a system call in Linux kernel, which supports multiple ciphers to encrypt or decrypt an input file.( Sep '15)}
+%     \resumeSubItem{Peg- Solitaire, Connect Four, Sudoku (Game Development)}{Designed a Peg Solitaire, Connect Four and Sudoku using Iterative Deepening Search, Alpha-beta pruning and Backtracking, MRV and Forward Chaining Artificial Intelligence Algorithms respectively in Python. (Aug '15)}
+% \resumeSubHeadingListEnd
+
+%
+%---------SKILLS------------
+\section{Skills}
+\resumeSubHeadingListStart
+	\resumeItemWithTitle{Languages}{Python, JavaScript, TypeScript, SQL, Java, C++, Bash, LaTeX} 
+    \resumeItemWithTitle{Frameworks}{Node.js/Express.js, React.js, Django, Mongoose, GraphQL} 
+    \resumeItemWithTitle{Databases}{Relational Databases: PostgreSQL, MySQL, Non-relational Databases: MongoDB, Redis, RabbitMQ}
+    \resumeItemWithTitle{Software Knowledge}{Object Oriented Design (OOD), Design Patterns, Distributed Systems, Test-Driven Development (TDD), Data Structures, Algorithms, RESTful API Development, Web development}
+    \resumeItemWithTitle{Tools}{Docker, Git, CI/CD, Nginx, ElasticSearch, Logstash, Kibana, Sentry, Grafana, HTML/CSS, JQuery, Figma, Metabase}
+    \resumeItemWithTitle{Cloud Infrastructure}{Linux server administration, Amazon AWS, Web Hosting and VPS services}
+    \resumeItemWithTitle{Testing}{Unit, integration and end-to-end testing, Mocha, Jest, Tap, JUnit}
+    \resumeItemWithTitle{Teamwork}{Agile, Scrum, Kanban, Trello, Notion, Pair Programming, Tech Blogs, Mentoring, Tech Interviews, Documentation}
+\resumeSubHeadingListEnd
 
 
-
+% %-----------Awards-----------------
+% \section{Honors and Awards}
+% \begin{description}[font=$\bullet$]
+% \item {Selected in top 20 students for the Code House event organized by VMware in August15 - August17, 2016.} 
+% \item {Ranked first among batch of 60 students in my Computer Science Engineering Branch.}
+% \item {Ranked fifth among batch of 500 students at High School Level A.I.S.S.E 2005}
+% \end{description}
 %-------------------------------------------
 \end{document}
