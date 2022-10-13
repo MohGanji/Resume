@@ -1,0 +1,46 @@
+Wealthsimple is on a mission to help everyone achieve financial freedom, no matter who they are or how much they have. Using smart technology, Wealthsimple takes financial services that are often confusing, opaque and expensive and makes them simple, transparent, and low-cost. We're the company behind some of Canada's leading digital financial products, and are growing faster than ever.
+
+Our team is reimagining what it means to manage your money. Smart, high-performing team members will challenge you to learn and grow every day. We value great work and great ideas — not ego. We're looking for talented people who love a fast-paced environment, and want to ship often and make an impact with groundbreaking ideas.
+
+We’re a remote-first team and output is more important than face time, so where you choose to work is up to you — as long as you have internet access, you can work from anywhere in Canada. Be a part of our Canadian success story and help shape the financial future of millions — join us! Read our Culture Manual and learn more about how we work.
+
+Crypto @ Wealthsimple
+Our vision is to enable all Canadians to participate in and benefit from the Crypto ecosystem no matter who they are. We aspire to build a simple, safe and trusted platform that emphasizes education and provides access to all the benefits and opportunities that crypto has to offer.
+
+We have ambitious plans for Wealthsimple Crypto, that go much further beyond our current trading platform, and are looking for ambitious individuals that can help us shape and execute that vision.
+
+The Crypto space is constantly evolving and can be hard to keep up with. To help keep our team at the forefront of the space, the Crypto team reserves 20% of our time to prototype and dabble with new Crypto technologies in a self-directed environment.
+Our Tech Stack:
+
+We have a microservice architecture with over 100+ services – these services are a mixture of Ruby on Rails, Typescript, NodeJS and front end UI libraries written in React or React Native. We favour a test driven development approach
+We are currently evolving our architecture to adopt event-driven design with Kafka as well as using GraphQL APIs to represent our data model
+We host our services on Amazon Web Services and use things like RDS, Aurora, SQS, SNS, S3, etc.
+We follow the latest best practices and have great tools for profiling, logging, tracing, tracking and experimenting
+We have support from frontend platform, infrastructure, security and developer tools teams with a mission to help us work smarter and more efficiently
+We have a Redshift based data warehouse that integrates data from our back-end that allows you build tight feedback loops between what you ship and how it impacts your feature, your product and the overall company
+Within 1 month, you'll:
+
+Learn about the foundations of Wealthsimple, and our current goals for the future that you will start to shape
+Meet other new Wealthsimplers in your onboarding group and key people from each department, to start to build relationships across the company
+Gather an understanding of our technology by pair-programming with your teammates and attending engineering onboarding sessions designed and presented by your peers
+Have an assigned buddy within your team that will assist you in getting up-to-speed with our architecture and current projects
+Within 3 months, you'll:
+
+Learn Wealthsimple’s technical stack and apply our development patterns and best practices through your work
+Buddy up for your first on-call rotation to help identify and resolve production issues and bugs clients have experienced
+Contribute and support work in a new or existing product and share your work with the team
+Learn how to query our data to measure the impact of your work
+Support over a million clients on their financial journey by shipping your first project or feature in a secure, and scalable way 🚀
+Within 6 months, you'll:
+
+Reliably ship new features to our clients, following our best practices such as shipping daily, writing automated tests and monitoring
+Contribute to or lead the technical design of a project, while understanding how it will shape our future architecture
+Collaborate with other developers on the team while mentoring and providing continuous feedback via code reviews
+Develop a big picture perspective and understand how our tools and frameworks come together. You’ll feel comfortable contributing to various codebases
+Within 12 months, you'll:
+
+Lead your first project: planning, scoping and regularly communicating progress to stakeholders to ensure the quality and timeliness
+Have provided leverage to our engineering teams by shipping new best practices and tools for all to benefit from
+Participate in our hiring process and shape the growth of the Engineering team
+Have worked closely with our product and design teams, contributing your own feedback and opinions on design and UX
+At Wealthsimple, we are building products for a diverse world and we need a diverse team to do that successfully. We strongly encourage applications from everyone regardless of race, religion, colour, national origin, gender, sexual orientation, age, marital status, or disability status. Wealthsimple provides an accessible candidate experience. If you need any accommodations or adjustments throughout the interview process and beyond, please let us know.
