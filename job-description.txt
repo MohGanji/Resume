@@ -1,0 +1,49 @@
+Online Software Engineer - EA SPORTS™ FC
+
+Electronic Arts is the leading interactive entertainment company, powered by innovative technology. 
+We create incredible experiences for millions of players around the world. 
+But what matters most is our people who inspire us, and the world, to play. 
+As we bring new forms of entertainment to people around the world, we need creative, collaborative, diverse and adaptable people to keep making Electronic Arts better.
+
+EA SPORTS is one of the leading sports entertainment brands in the world, with top-selling videogame franchises, award-winning interactive technology, fan programs, and cross-platform digital experiences. 
+EA SPORTS creates connected experiences that ignite the emotion of sport through industry-leading sports video games, including Madden NFL football, EA Sports FC, NHL® hockey, and EA SPORTS UFC.
+
+After nearly 30 years of creating genre-defining, interactive football experiences with the world's biggest football entertainment platform, EA SPORTS FIFA, we are soon beginning a new era. 
+EA SPORTS™ FC will become the future of football from EA SPORTS – as we aim to take global football experiences to new heights, on behalf of football fans everywhere. 
+With more opportunity than ever to create new, authentic experiences that bring joy, inclusivity, and immersion to a global community of fans, we invite you to join us and pioneer the future of football with EA SPORTS!
+
+The Online Software Engineer will help build networked gameplay experiences for EA Sports titles. 
+We are looking for engineers who enjoy prototyping and planning, adding amazing new features to an existing and beloved game, and improving existing code. 
+You will report to the Operations Development Director and Technical Lead to estimate, build projects and provide excellent results.
+
+Your Responsibilities:
+
+-- from another job description, same company
+You will develop technical solutions for online game features.
+You will do full stack development working on both game client and backend services.
+You will work with Designers, Artists, and Engineers from other domains.
+You will work with a proprietary engine to develop stable, scalable, efficient, and shareable code.
+You will iterate and design improvements to live systems and workflows.
+You will work with 3rd party and internal software APIs.
+-- ends here.
+
+You will develop technical solutions for online game features.
+You will work with a proprietary engine to develop stable, scalable, efficient, and shareable code.
+You will look for ways to increase team efficiency through tooling or workflow enhancements.
+You have awareness of how technical implementation impacts our performance and memory budgets.
+You iterate and design improvements to live systems and workflows
+You will work with 3rd party and internal software APIs.
+Your Qualifications:
+
+Bachelor's degree in computer science or related field, or equivalent training and professional experience.
+1 + years of experience in C++ software development.
+1 + years of experience with Client/Server, Peer-to-Peer, and multi-threaded architectures.1+ years of experience working on Microsoft, and Sony game consoles.
+1+ years of experience of real-time game networking.
+1+ years of experience with Linux.
+1+ years of experience with Visual Studio and knowledge of the debugging tools.
+1+ years of experience with source control systems will come in handy.
+1+ years of experience with scripting languages (Python, Lua) and interpreted languages (C#).
+1+ years of experience with 3rd party APIs.
+Knowledge of modern database technologies.
+Knowledge of networking protocols.
+Knowledge of good software programming practices.

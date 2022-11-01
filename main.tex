@@ -58,7 +58,7 @@
 
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1\vspace{-2pt}}
+    {#1\vspace{0pt}}
   }
 }
 
@@ -67,7 +67,7 @@
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-5pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 
@@ -91,7 +91,7 @@
   \textbf{{\LARGE Mohammad Ganji}} \\
   %
   Linkedin: \href{https://www.linkedin.com/in/mohganji/}{https://www.linkedin.com/in/mohganji} 
-  & Email : \href{mailto:m_ganji@sfu.ca}{m_ganji@sfu.ca} \\
+  & Email : \href{mailto:m_ganji@sfu.ca}{m\_ganji@sfu.ca} \\
   %
   Github: \href{https://github.com/mohganji}{https://github.com/mohganji} 
   & Website: \href{https://ganji.blog/me}{ganji.blog}\\
@@ -110,43 +110,45 @@
     {Simon Fraser University (SFU)}{Burnaby, CA}
     {Research and Teaching Assistant}{Sep 2020 - Dec 2022 (2 years)}
     \resumeItemListStart
-        \resumeItem{Led a research paper on testing and debugging asynchronous programs.}
-        \resumeItem{Developed a VSCode extension to integrate our approach into a coding environment.}
+        \resumeItem{Led a research paper on testing and debugging asynchronous programs in JavaScript.}
+        \resumeItem{\textbf{Designed and implemented a Visual Studio Code extension (in TypeScript) from scratch} to integrate our research approach into a coding environment.}
         % \resumeItem{Designed and conducted two controlled user studies.}
-        % \resumeItem{Teaching Assistant for CMPT 276(Software Engineering, 3 terms) and CMPT 120(Intro to computer programming, once).}
+        \resumeItem{Instructed and mentored teams of students on \textbf{software design patterns and good programming practices} through developing an arcade game in Java as a teaching assistant for CMPT 276 (Intro to Software Engineering course).}
     \resumeItemListEnd
     
     \resumeSubheading
     {CSIL Exam Scheduler - SFU}{Burnaby, CA}
-    {Web Developer - Contract Job}{Jun 2021 - Sep 2021 (4 months)}
+    {Web Engineer - Contract Job}{Jun 2021 - Sep 2021 (4 months)}
     \resumeItemListStart
-        \resumeItem{Implemented web server and web client of SFU CSIL in-lab test scheduling automation using Node.js, PostgreSQL, and EJS.}
+        \resumeItem{Revamped web server and client of SFU CSIL in-lab test scheduling automation using Node.js, PostgreSQL, and EJS.}
+        \resumeItem{\textbf{Communicated with SFU CS Faculty and IT staff to collect feedback and make design improvements}.}
     \resumeItemListEnd
       
     \resumeSubheading
 		{Yektanet - Digital Advertising Platform (\href{https://en.yektanet.com}{Link})}{Tehran, IR}
 		{Software Engineer}{Dec 2019 - Dec 2020 (1 year)}
 		\resumeItemListStart
-        \resumeItem{Scaled, redesigned, and refactored push notification advertising microservice from 5M to 100M daily push notifications, resulting in 15x revenue increase in 1 year.}
-        \resumeItem{Architectured large scale databases (40M+ users, 20+ tables in PostgreSQL) and Redis pipelines to optimize and reduce average query time by 80\% for critical, recurring database queries.}
-        \resumeItem{Stepped up for product management, launch, and release a new feature, aka CPC push advertisement, which led to a 30\% revenue growth within a month from first release.}
-        \resumeItem{Representative for external communication to collaborate with other tech teams and non-technical teams, such as sales, account management and product teams.}
-        \resumeItem{Set up log management pipelines using ELK stack (Elasticsearch, Logstash, Kibana).}
+        \resumeItem{Scaled, redesigned, and refactored push notification advertising microservice from 5M to 100M daily push notifications, resulting in \textbf{15x revenue increase in 1 year}.}
+        \resumeItem{\textbf{Architectured large scale efficient databases} (40M+ users, 20+ tables in PostgreSQL) and Redis pipelines to optimize and reduce average query time by 80\% for critical, recurring database queries.}
+        \resumeItem{\textbf{Coordinated product management, launch, and release a new feature, aka CPC push advertisement, which led to a 30\% revenue growth} within a month from initial release.}
+        \resumeItem{Communicated with non-technical internal teams, such as sales, design, account management and product teams.}
+        \resumeItem{Representative for \textbf{collaboration with technical teams in other companies to develop 3rd party APIs for external integrations}.}
+        \resumeItem{Set up deployment automation scripts (bash scripts on Linux servers) and log management pipelines using ELK stack (Elasticsearch, Logstash, Kibana).}
         \resumeItem{Configured and maintained server load monitoring dashboards using Grafana.}
         \resumeItem{Interviewed 5 applicants, mentored 3 interns, reviewed 100+ resumes and 100+ technical tasks.}
 		\resumeItemListEnd
 
     \resumeSubheading
     {Pheebs - Mobile Application Startup}{Tehran, IR}
-    {Full Stack Web Engineer}{Sep 2017 - Nov 2019 (2 years)}
+    {Full Stack Software Developer}{Sep 2017 - Nov 2019 (2 years)}
     \resumeItemListStart
-        \resumeItem{Lead backend engineer of Episode mobile app (20k+ users). Developed Epsiode from scratch using GraphQL and Node.js.}
-        \resumeItem{Implemented and scaled the backend service of Chizz, a social media web application with autonomous content management and 120k+ monthly active users.}
-        \resumeItem{Built and shipped Pact Node.js library internally, an inventive mechanism that allowed automatic API generation through predefined schemas.}
+        \resumeItem{Lead backend engineer of Episode (Interactive chat-story entertainment mobile app with 20k+ active users). Developed Episode backend from scratch using GraphQL and Node.js.}
+        \resumeItem{\textbf{Implemented backend service of Chizz and redesigned its Client/Server communication architecture for scalability}. (A social media web application with autonomous content management and 120k+ monthly active users.)}
+        \resumeItem{\textbf{Built and shipped Pact Node.js library internally}, an inventive mechanism that allowed automatic API generation through predefined schemas.}
         \resumeItem{Developed responsive and interactive components for Chizz web client in React.}
         % \resumeItem{Developed admin panel, landing page, and web views for two mobile applications.}
-        \resumeItem{Collaborated with 4 teammates in an agile environment acting as the scrum master.}
-        \resumeItem{Designed maintainable and scalable databases and caching using MongoDB, Mongoose, and Redis. (30+ collections)}
+        \resumeItem{Collaborated with 4 teammates in an agile environment acting as the \textbf{scrum master}.}
+        \resumeItem{Designed maintainable and scalable databases and caching using modern NoSQL databases. (MongoDB, Mongoose, and Redis - 30+ collections)}
         \resumeItem{Automated testing and deployment of Episode using Docker, Nginx and CI/CD pipelines.}
         \resumeItem{Built and organized data analysis and insights dashboards using Metabase to monitor business and product KPIs.}
         % \resumeItem{Coached one entry-level backend developer.}
@@ -158,7 +160,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {Simon Fraser University}{Burnaby, CA}
-      {Thesis based Masters in Computer Science;  GPA: 3.89}{Sep 2020 - Dec 2022 (expected)}
+      {Masters in Computer Science (Thesis based);  GPA: 3.89}{Sep 2020 - Dec 2022 (expected)}
       
 	   %{\scriptsize \textit{Courses: Operating Systems, Analysis Of Algorithms, Artificial Intelligence, Machine Learning, Probability and Statistics and Network Security.}}
 	    
@@ -173,11 +175,11 @@
 \resumeSubHeadingListStart
     \resumeSubheading
       {\href{http://blogfrog.xyz}{Blogfrog.xyz}}{Burnaby, CA}
-      {A website to randomly discover new blog posts on the internet.}{Jul 2022}
+      {A fully front-end website to randomly discover new blog posts on the internet. Scrapes my favorite blogs.}{Jul 2022}
 	    
     \resumeSubheading
       {\href{http://ganji.blog/me}{ganji.blog}}{Burnaby, CA}
-      {My personal website}{Mar 2022}
+      {My personal website, built from scratch using semantic HTML, CSS, and JavaScript.}{Mar 2022}
       
     \resumeSubheading
       {\href{https://t.me/SchemaIran_Bot}{SchemaIran Telegram Bot - Freelance Project}}{Tehran, IR}
